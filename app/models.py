@@ -207,6 +207,7 @@ class User(UserMixin, db.Model):
         db.session.add(self)
 
     def gravatar(self, size=100, default='identicon', rating='g'):
+        return 'https://striker.teambition.net/thumbnail/110e094ee4b0c4c49d2d67c930db16dbba0c/w/'+str(size)+'/h/'+str(size)
         if request.is_secure:
             url = 'https://secure.gravatar.com/avatar'
         else:
